@@ -33,6 +33,15 @@ npm run test
 npm run build
 ```
 
+## App Routes
+
+- `/` - overview, expensive mistake alerts, and life-moment timelines
+- `/money` - move-in estimate, affordability, rental fees, and local-data roadmap
+- `/checklist` - life admin checklist
+- `/deadlines` - residence card, renewal, moving, and custom dates
+- `/notes` - notes and official-source guides
+- `/profile` - arrival profile, privacy boundary, backup, and settings
+
 ## Supabase Setup
 
 1. Create a Supabase project.

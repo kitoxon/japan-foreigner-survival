@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { AppShell } from "@/components/app-shell";
+import { JapanReadyProvider } from "@/components/japan-ready-provider";
 import PwaRegistration from "@/components/pwa-registration";
 import "./globals.css";
 
@@ -56,7 +58,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {children}
+        <JapanReadyProvider>
+          <AppShell>{children}</AppShell>
+        </JapanReadyProvider>
         <PwaRegistration />
       </body>
     </html>

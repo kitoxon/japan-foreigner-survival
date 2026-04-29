@@ -7,11 +7,8 @@ const brandAccent = "#ccfbf1";
 
 export function createAppIcon(size: number, maskable = false) {
   const safeZone = maskable ? size * 0.14 : 0;
-  const fontSize = Math.round(size * 0.36);
+  const fontSize = Math.round(size * 0.54);
   const radius = Math.round(size * 0.22);
-  const checkWidth = Math.round(size * 0.2);
-  const checkHeight = Math.round(size * 0.1);
-  const checkStroke = Math.max(2, Math.round(size * 0.035));
 
   return new ImageResponse(
     createElement(
@@ -36,7 +33,6 @@ export function createAppIcon(size: number, maskable = false) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            gap: Math.max(1, Math.round(size * 0.02)),
             borderRadius: radius,
             background: "linear-gradient(135deg, #0f766e 0%, #164e63 100%)",
             border: `${Math.max(2, Math.round(size * 0.025))}px solid ${brandAccent}`,
@@ -47,22 +43,7 @@ export function createAppIcon(size: number, maskable = false) {
             letterSpacing: 0,
           },
         },
-        createElement("span", { style: { lineHeight: 1 } }, "J"),
-        createElement("span", { style: { lineHeight: 1 } }, "J"),
-        createElement(
-          "div",
-          {
-            style: {
-              width: checkWidth,
-              height: checkHeight,
-              borderLeft: `${checkStroke}px solid ${brandAccent}`,
-              borderBottom: `${checkStroke}px solid ${brandAccent}`,
-              transform: "rotate(-45deg)",
-              marginLeft: -Math.round(size * 0.01),
-              marginTop: Math.round(size * 0.06),
-            },
-          },
-        ),
+        createElement("span", { style: { lineHeight: 1, marginTop: -Math.round(size * 0.03) } }, "J"),
       ),
     ),
     {

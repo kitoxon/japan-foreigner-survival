@@ -1,9 +1,14 @@
-import SurvivalDashboard from "@/components/survival-dashboard";
+import { LegalWarning } from "@/components/dashboard/legal-warning";
+import { MistakeAlerts, TimelineSection } from "@/components/dashboard/mistakes-timeline";
+import { StatusCard } from "@/components/dashboard/status-card";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-100 text-slate-950">
-      <SurvivalDashboard />
-    </main>
+    <>
+      <MistakeAlerts />
+      <TimelineSection />
+      <StatusCard />
+      <LegalWarning />
+    </>
   );
 }
