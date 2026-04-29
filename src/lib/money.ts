@@ -139,12 +139,22 @@ export const rentalGlossary = [
 export const moneyDataSources = [
   {
     name: "Statistics Dashboard API",
-    bestFor: "City and prefecture statistics without user registration.",
+    bestFor: "City, ward, and prefecture region lists plus statistics without user registration.",
     url: "https://dashboard.e-stat.go.jp/en/static/api",
   },
   {
     name: "e-Stat API",
     bestFor: "Official labor/wage and housing datasets after issuing an app ID.",
     url: "https://www.e-stat.go.jp/api/en",
+  },
+  {
+    name: "Japan Post postal-code API",
+    bestFor: "Postal-code to address lookup, including kanji, kana, and romaji support.",
+    url: "https://www.post.japanpost.jp/zipcode/download.html",
+  },
+  {
+    name: "Digital Agency address base registry",
+    bestFor: "Official address/location base data for future address normalization.",
+    url: "https://www.digital.go.jp/en/policies/base_registry",
   },
 ] as const;

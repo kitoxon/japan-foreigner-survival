@@ -49,6 +49,8 @@ For salary, wage, housing, and city comparisons, use sourced statistics instead 
 
 - Statistics Dashboard API: no registration required and supports JSON/CSV.
 - e-Stat API: official government statistics API; requires signup and an application ID.
+- Japan Post postal-code/digital-address API: official free API announced for postal-code and digital-address lookup, useful for address autofill.
+- Digital Agency address base registry: official base address/location data that can support future address normalization.
 
 Real-time apartment listings are not included in those official APIs, so the current move-in calculator uses user-entered listing numbers.
 
