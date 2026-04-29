@@ -13,6 +13,17 @@ The app helps users organize:
 
 The current product works without an account. Supabase-ready API routes and schema are included for the next cloud-sync step.
 
+## PWA
+
+The app includes installable PWA metadata:
+
+- `src/app/manifest.ts` for the web app manifest.
+- Generated app icons in `src/app/icon.tsx`, `src/app/apple-icon.tsx`, and PNG route handlers.
+- `public/sw.js` for a conservative offline shell cache.
+- `src/components/pwa-registration.tsx` to register the service worker in production.
+
+Installability should be tested after deployment over HTTPS, for example on Vercel.
+
 ## Scripts
 
 ```bash

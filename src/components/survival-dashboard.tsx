@@ -15,6 +15,7 @@ import { generateTasks, mergeGeneratedTasks } from "@/lib/task-generation";
 import type { AppState, Deadline, MoneyCheck, PersonalNote, TaskStatus, UserProfile } from "@/lib/types";
 import { DeadlinesSection } from "./dashboard/deadlines-section";
 import { LegalWarning } from "./dashboard/legal-warning";
+import { MistakeAlerts, TimelineSection } from "./dashboard/mistakes-timeline";
 import { MoneyCalculator, RentalInsights } from "./dashboard/money-section";
 import { NotesGuidesSection } from "./dashboard/notes-guides";
 import {
@@ -210,7 +211,7 @@ export default function SurvivalDashboard() {
             Japan Ready
           </h1>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-            Move in, stay organized, and keep important Japan paperwork and deadlines under control.
+            A survival guide for foreign residents who want to avoid expensive Japan mistakes.
           </p>
         </div>
 
@@ -239,8 +240,11 @@ export default function SurvivalDashboard() {
         </aside>
 
         <section className="space-y-4">
+          <MistakeAlerts />
+          <TimelineSection />
           <StatusCard />
           <MoneyCalculator
+            id="move-in-calculator"
             moneyCheck={state.moneyCheck}
             costs={moveInCosts}
             onChange={updateMoneyCheck}
