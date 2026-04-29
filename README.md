@@ -8,6 +8,7 @@ The app helps users organize:
 - generated city-office, banking, phone, insurance, pension, housing, and renewal tasks
 - residence-card and custom deadlines
 - document checklists and official-source guide links
+- move-in cost estimates, rent affordability checks, and rental fee glossary
 - local JSON export/import backups
 
 The current product works without an account. Supabase-ready API routes and schema are included for the next cloud-sync step.
@@ -41,6 +42,15 @@ The API routes expect a user bearer token from Supabase Auth:
 - `GET /api/export`
 
 The UI remains local-first until authentication and cloud sync are wired into the client.
+
+## Future Statistics Data
+
+For salary, wage, housing, and city comparisons, use sourced statistics instead of hard-coded claims:
+
+- Statistics Dashboard API: no registration required and supports JSON/CSV.
+- e-Stat API: official government statistics API; requires signup and an application ID.
+
+Real-time apartment listings are not included in those official APIs, so the current move-in calculator uses user-entered listing numbers.
 
 ## Privacy Boundary
 

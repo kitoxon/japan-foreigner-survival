@@ -881,6 +881,37 @@ function TextInput({
   );
 }
 
+function NumberInput({
+  label,
+  value,
+  onChange,
+  min = "0",
+  max,
+  step = "1000",
+}: {
+  label: string;
+  value: number;
+  onChange: (value: number) => void;
+  min?: string;
+  max?: string;
+  step?: string;
+}) {
+  return (
+    <label className="block text-sm">
+      <span className="mb-1 block font-medium text-slate-700">{label}</span>
+      <input
+        type="number"
+        min={min}
+        max={max}
+        step={step}
+        value={value}
+        onChange={(event) => onChange(Number(event.target.value))}
+        className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-teal-600"
+      />
+    </label>
+  );
+}
+
 function SelectInput({
   label,
   value,
